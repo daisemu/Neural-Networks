@@ -7,18 +7,11 @@ class Neuron{
             input = 0;
             output = 0;
         }
-        
-        ~Neuron(){
-        }
-        
+
         void processing(){
             output = input;   
         }
-        
-        void set_zero(){
-            input = 0;   
-        }
-        
+      
         long double input, output;
     private:
 };
@@ -30,10 +23,7 @@ class Synapse{
             b = _b;
             weight = def_w;
         }
-        
-        ~Synapse(){
-        }
-        
+ 
         void processing(){
             b->input += (a->output * weight);
             b->processing();
@@ -54,7 +44,7 @@ int main(){
     a.output = 1;
     b.output = 1;
     
-    c.set_zero();
+    c.input = 0;
     
     ac.processing();
     bc.processing();
