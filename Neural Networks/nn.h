@@ -7,9 +7,10 @@ class Neuron{
             output = 0;
         }
 
-        void processing(long double treshold,long double Nf){
-            if(input >= treshold)
-                output = Nf;   
+        void processing(long double weight, long double treshold,long double Nf){
+            if(input * weight >= treshold)
+                output = Nf;  
+            else output = 0;
         }
       
         long double input, output;
@@ -25,8 +26,8 @@ class Synapse{
         }
  
         void processing(){
+            a->processing(weight,0.5,a->input);
             b->input += (a->output * weight);
-            b->processing(0.1,b->input);
         }
         
         long double weight;
