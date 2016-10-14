@@ -49,7 +49,7 @@ int main(){
     Neuron a, b, c;
     
     Synapse ac(&a,&c,0.3);
-    Synapse bc(&a,&b,0.3);
+    Synapse bc(&b,&c,0.4);
     
     a.output = 1;
     b.output = 1;
