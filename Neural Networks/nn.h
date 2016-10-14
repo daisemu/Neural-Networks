@@ -9,7 +9,7 @@ class Neuron{
 
         void processing(long double treshold,long double Nf){
             if(input >= treshold)
-                output = N;   
+                output = Nf;   
         }
       
         long double input, output;
