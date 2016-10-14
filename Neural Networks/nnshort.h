@@ -5,8 +5,8 @@
 #define N Neuron
 #define S Synapse
 #define proc processing
-#define W weight
-#define I input
-#define O output
+#define w weight
+#define i input
+#define o output
 
 #endif
